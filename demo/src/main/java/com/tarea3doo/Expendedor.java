@@ -1,4 +1,4 @@
-package com.tarea1doo;
+package com.tarea3doo;
 /**
  * Esta clase representa un expendedor de bebidas y dulces.
  * El expendedor tiene depósitos para cada tipo de bebida y dulce (Coca-Cola, Sprite, Fanta, Snickers y Super8) y un depósito para las monedas.

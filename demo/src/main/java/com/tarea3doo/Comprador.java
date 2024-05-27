@@ -1,4 +1,4 @@
-package com.tarea1doo;
+package com.tarea3doo;
 
 /* Representa a un comprador que puede comprar bebidas o dulces de un expendedor.*/
 public class Comprador{

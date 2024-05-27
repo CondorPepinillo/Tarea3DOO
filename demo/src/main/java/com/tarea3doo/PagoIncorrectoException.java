@@ -1,4 +1,4 @@
-package com.tarea1doo;
+package com.tarea3doo;
 
 public class PagoIncorrectoException extends Exception{
     public  PagoIncorrectoException(){

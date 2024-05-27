@@ -1,4 +1,4 @@
-package com.tarea1doo;
+package com.tarea3doo;
 
 public class Moneda1000 extends Moneda{
     public Moneda1000(){
