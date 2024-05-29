@@ -7,6 +7,7 @@ package com.tarea3doo;
  */
 public class Main {
     public static void main(String[] args){
+        VentanaExp ventanaExp = new VentanaExp();
         Expendedor exp = new Expendedor(5, ProductList.COCA);
         Expendedor exp2 = new Expendedor(5, ProductList.SNICKERS);
         Moneda m = null;
