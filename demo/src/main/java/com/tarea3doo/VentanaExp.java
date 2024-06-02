@@ -23,6 +23,7 @@ public class VentanaExp {
 
     private int dineroUsuario = 0;
 
+
     public VentanaExp(){
         JFrame frame = new JFrame("Ventana Exp");
         frame.getContentPane().add(panel1);
