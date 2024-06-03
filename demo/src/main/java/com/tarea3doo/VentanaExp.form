@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.tarea3doo.VentanaExp">
   <grid id="27dc6" binding="panel1" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="1527" height="1179"/>
+      <xy x="5" y="5" width="1527" height="1179"/>
     </constraints>
     <properties/>
     <border type="none">
@@ -75,7 +75,7 @@
           </grid>
         </children>
       </grid>
-      <grid id="e5ee7" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="e5ee7" binding="MonedasPanel" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="West"/>
         <properties>
@@ -131,20 +131,13 @@
           </component>
         </children>
       </grid>
-      <component id="198c6" class="javax.swing.JLabel">
-        <constraints border-constraint="South"/>
-        <properties>
-          <enabled value="true"/>
-          <text value=""/>
-        </properties>
-      </component>
-      <grid id="ee4d6" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="ee4d6" binding="PreciosPanel" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="Center"/>
         <properties/>
         <border type="none"/>
         <children>
-          <component id="e36b5" class="javax.swing.JLabel">
+          <component id="e36b5" class="javax.swing.JLabel" binding="precioCoca">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -153,7 +146,7 @@
               <text value="$500"/>
             </properties>
           </component>
-          <component id="872bd" class="javax.swing.JLabel">
+          <component id="872bd" class="javax.swing.JLabel" binding="precioSprite">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -162,7 +155,7 @@
               <text value="$500"/>
             </properties>
           </component>
-          <component id="f4d7e" class="javax.swing.JLabel">
+          <component id="f4d7e" class="javax.swing.JLabel" binding="precioFanta">
             <constraints>
               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -171,7 +164,7 @@
               <text value="$500"/>
             </properties>
           </component>
-          <component id="c5b1b" class="javax.swing.JLabel">
+          <component id="c5b1b" class="javax.swing.JLabel" binding="precioSnickers">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -180,13 +173,21 @@
               <text value="$500"/>
             </properties>
           </component>
-          <component id="8a7a8" class="javax.swing.JLabel">
+          <component id="8a7a8" class="javax.swing.JLabel" binding="precioSuper8">
             <constraints>
               <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <icon value="supero829g (1).png"/>
               <text value="$500"/>
+            </properties>
+          </component>
+          <component id="8f9f8" class="javax.swing.JLabel" binding="dineroIngresado">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Label"/>
             </properties>
           </component>
         </children>

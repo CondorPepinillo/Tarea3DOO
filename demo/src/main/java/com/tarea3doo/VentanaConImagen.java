@@ -23,6 +23,15 @@ public class VentanaConImagen extends JFrame {
                 else if (producto == ProductList.SPRITE) {
                     imagen = new ImageIcon("../Tarea3DOO/demo/src/main/resources/BebidaSprite500mlx.png");
                 }
+                else if (producto == ProductList.FANTA){
+                    imagen = new ImageIcon("../Tarea3DOO/demo/src/main/resources/fanta-botella.png");
+                }
+                else if (producto == ProductList.SNICKERS){
+                    imagen = new ImageIcon("../Tarea3DOO/demo/src/main/resources/Chocolate-Peanut-53-g.png");
+                }
+                else if (producto == ProductList.SUPER8){
+                    imagen = new ImageIcon("../Tarea3DOO/demo/src/main/resources/supero829g (1).png");
+                }
                 // Dibujar la imagen en el panel
                 g.drawImage(imagen.getImage(), 0, 0, getWidth(), getHeight(), null);
             }
