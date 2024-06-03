@@ -29,6 +29,13 @@ public class VentanaExp extends JFrame{
     private int fantaPrice = 300;
     private int snickersPrice = 500;
     private int super8Price = 500;
+
+    private int cantidadCoca = 5;
+    private int cantidadSprite = 5;
+    private int cantidadFanta = 5;
+    private int cantidadSnickers = 5;
+    private int cantidadSuper8 = 5;
+
     private int dineroUsuario = 0;
 
 
@@ -81,10 +88,14 @@ public class VentanaExp extends JFrame{
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                if(dineroUsuario >= cocaColaPrice){
+                if(dineroUsuario >= cocaColaPrice && cantidadCoca > 0){
                     new VentanaConImagen(ProductList.COCA);
                     dineroUsuario = dineroUsuario - cocaColaPrice;
+                    cantidadCoca--;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
+                    if(cantidadCoca == 0){
+                        precioCoca.setVisible(false);
+                    }
                 }
             }
         });
@@ -92,10 +103,14 @@ public class VentanaExp extends JFrame{
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                if(dineroUsuario >= spritePrice){
+                if(dineroUsuario >= spritePrice && cantidadSprite > 0){
                     new VentanaConImagen(ProductList.SPRITE);
                     dineroUsuario = dineroUsuario - spritePrice;
+                    cantidadSprite--;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
+                    if(cantidadSprite == 0){
+                        precioSprite.setVisible(false);
+                    }
                 }
             }
         });
@@ -103,10 +118,14 @@ public class VentanaExp extends JFrame{
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                if(dineroUsuario >= fantaPrice){
+                if(dineroUsuario >= fantaPrice && cantidadFanta > 0){
                     new VentanaConImagen(ProductList.FANTA);
                     dineroUsuario = dineroUsuario - fantaPrice;
+                    cantidadFanta--;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
+                    if(cantidadFanta == 0){
+                        precioFanta.setVisible(false);
+                    }
                 }
             }
         });
@@ -114,10 +133,14 @@ public class VentanaExp extends JFrame{
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                if(dineroUsuario >= snickersPrice){
+                if(dineroUsuario >= snickersPrice && cantidadSnickers > 0){
                     new VentanaConImagen(ProductList.SNICKERS);
                     dineroUsuario = dineroUsuario - snickersPrice;
+                    cantidadSnickers--;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
+                    if(cantidadSnickers == 0){
+                        precioSnickers.setVisible(false);
+                    }
                 }
             }
         });
@@ -125,10 +148,14 @@ public class VentanaExp extends JFrame{
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                if(dineroUsuario >= super8Price){
+                if(dineroUsuario >= super8Price && cantidadSuper8 > 0){
                     new VentanaConImagen(ProductList.SUPER8);
                     dineroUsuario = dineroUsuario - super8Price;
+                    cantidadSuper8--;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
+                    if(cantidadSuper8 == 0){
+                        precioSuper8.setVisible(false);
+                    }
                 }
             }
         });
