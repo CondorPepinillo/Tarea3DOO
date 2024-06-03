@@ -1,5 +1,5 @@
 package com.tarea3doo;
-
+import com.tarea1doo.ProductList;
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -36,6 +36,12 @@ public class VentanaExp extends JFrame{
     private int cantidadFanta = 5;
     private int cantidadSnickers = 5;
     private int cantidadSuper8 = 5;
+
+    private  int i1 = 0;
+    private int i2 = 0;
+    private int i3 = 0;
+    private int i4 = 0;
+    private int i5 = 0;
 
     private int dineroUsuario = 0;
 
@@ -90,9 +96,10 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= cocaColaPrice && cantidadCoca > 0){
-                    new VentanaConImagen(ProductList.COCA);
+                    new VentanaConImagen(ProductList.COCA, i1);
                     dineroUsuario = dineroUsuario - cocaColaPrice;
                     cantidadCoca--;
+                    i1++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadCoca == 0){
                         precioCoca.setVisible(false);
@@ -105,9 +112,10 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= spritePrice && cantidadSprite > 0){
-                    new VentanaConImagen(ProductList.SPRITE);
+                    new VentanaConImagen(ProductList.SPRITE,i2);
                     dineroUsuario = dineroUsuario - spritePrice;
                     cantidadSprite--;
+                    i2++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadSprite == 0){
                         precioSprite.setVisible(false);
@@ -120,9 +128,10 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= fantaPrice && cantidadFanta > 0){
-                    new VentanaConImagen(ProductList.FANTA);
+                    new VentanaConImagen(ProductList.FANTA, i3);
                     dineroUsuario = dineroUsuario - fantaPrice;
                     cantidadFanta--;
+                    i3++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadFanta == 0){
                         precioFanta.setVisible(false);
@@ -135,9 +144,10 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= snickersPrice && cantidadSnickers > 0){
-                    new VentanaConImagen(ProductList.SNICKERS);
+                    new VentanaConImagen(ProductList.SNICKERS, i4);
                     dineroUsuario = dineroUsuario - snickersPrice;
                     cantidadSnickers--;
+                    i4++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadSnickers == 0){
                         precioSnickers.setVisible(false);
@@ -150,9 +160,10 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= super8Price && cantidadSuper8 > 0){
-                    new VentanaConImagen(ProductList.SUPER8);
+                    new VentanaConImagen(ProductList.SUPER8, i5);
                     dineroUsuario = dineroUsuario - super8Price;
                     cantidadSuper8--;
+                    i5++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadSuper8 == 0){
                         precioSuper8.setVisible(false);

@@ -1,4 +1,4 @@
-package com.tarea3doo;
+package com.tarea1doo;
 
 /**
  * Una lista de los productos en nuestro programa

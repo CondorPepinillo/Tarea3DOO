@@ -1,12 +1,12 @@
-package com.tarea3doo;
+package com.tarea1doo;
 
 public class Super8 extends Producto{
     /**
      * Constructor de la clase Super8.
      * @param serie Serie del producto.
      */
-    public Super8(int serie, int cantidad){
-        super(serie, cantidad);
+    public Super8(int serie){
+        super(serie);
     }
     /**
      * Método que simula el acto de comer el producto.

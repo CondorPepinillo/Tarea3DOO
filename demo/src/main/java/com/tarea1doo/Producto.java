@@ -1,26 +1,14 @@
-package com.tarea3doo;
+package com.tarea1doo;
 
 public abstract class Producto{
     private int serie;
-    private int cantidad;
 
-    public Producto(int serie, int cantidad){
+    public Producto(int serie){
         this.serie = serie;
-        this.cantidad = cantidad;
     }
 
     public int getSerie(){
         return serie;
-    }
-
-    public int getCantidad(){
-        return cantidad;
-    }
-
-    public void disminuirCantidad(){
-        if (cantidad > 0){
-            cantidad--;
-        }
     }
 
     public abstract String beber();
