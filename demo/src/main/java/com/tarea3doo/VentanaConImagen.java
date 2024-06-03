@@ -1,4 +1,5 @@
 package com.tarea3doo;
+import com.tarea3doo.ProductList;
 import javax.swing.*;
 import java.awt.*;
 
