@@ -23,6 +23,7 @@ public class VentanaExp extends JFrame{
     private JLabel precioFanta;
     private JLabel precioSnickers;
     private JLabel precioSuper8;
+    private JButton devolverVuelto;
 
     private int cocaColaPrice = 300;
     private int spritePrice = 300;
@@ -157,6 +158,14 @@ public class VentanaExp extends JFrame{
                         precioSuper8.setVisible(false);
                     }
                 }
+            }
+        });
+        devolverVuelto.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                dineroUsuario = 0;
+                dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
             }
         });
     };

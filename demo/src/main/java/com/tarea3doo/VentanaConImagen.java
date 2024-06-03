@@ -6,7 +6,7 @@ public class VentanaConImagen extends JFrame {
 
     public VentanaConImagen(ProductList producto) {
         // Configurar la ventana
-        setTitle("Ventana con Imagen");
+        setTitle("Producto");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
