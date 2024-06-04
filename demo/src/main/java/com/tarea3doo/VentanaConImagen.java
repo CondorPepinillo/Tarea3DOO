@@ -25,7 +25,7 @@ public class VentanaConImagen extends JFrame {
                     System.out.println("Dispensada Cococola con numero de serie "+ coca.getSerie());
                 }
                 else if (producto == ProductList.SPRITE) {
-                    imagen = new ImageIcon("../Tarea3DOO/demo/src/main/resources/BebidaSprite500mlx.png");
+                    imagen = new ImageIcon("../Tarea3DOO/demo/src/main/resources/BebidaSprite500mlx (1).png");
                     Producto sprite = new Sprite();
                     System.out.println("Dispensada Sprite con numero de serie "+ sprite.getSerie());
                 }

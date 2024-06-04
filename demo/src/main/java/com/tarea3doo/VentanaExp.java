@@ -24,6 +24,7 @@ public class VentanaExp extends JFrame{
     private JLabel precioSnickers;
     private JLabel precioSuper8;
     private JButton devolverVuelto;
+    private JButton rellenarMaquina;
 
     private int cocaColaPrice = 300;
     private int spritePrice = 300;
@@ -31,17 +32,13 @@ public class VentanaExp extends JFrame{
     private int snickersPrice = 500;
     private int super8Price = 500;
 
-    private int cantidadCoca = 5;
-    private int cantidadSprite = 5;
-    private int cantidadFanta = 5;
-    private int cantidadSnickers = 5;
-    private int cantidadSuper8 = 5;
+    private int cantidadDefault = 5;
 
-    private  int i1 = 0;
-    private int i2 = 0;
-    private int i3 = 0;
-    private int i4 = 0;
-    private int i5 = 0;
+    private int cantidadCoca = cantidadDefault;
+    private int cantidadSprite = cantidadDefault;
+    private int cantidadFanta = cantidadDefault;
+    private int cantidadSnickers = cantidadDefault;
+    private int cantidadSuper8 = cantidadDefault;
 
     private int dineroUsuario = 0;
 
@@ -109,7 +106,6 @@ public class VentanaExp extends JFrame{
                     dineroUsuario = dineroUsuario - cocaColaPrice;
                     cantidadCoca--;
                     System.out.println("Quedan " + cantidadCoca + " CocaCola en deposito");
-                    i1++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadCoca == 0){
                         precioCoca.setVisible(false);
@@ -126,7 +122,6 @@ public class VentanaExp extends JFrame{
                     dineroUsuario = dineroUsuario - spritePrice;
                     cantidadSprite--;
                     System.out.println("Quedan " + cantidadSprite + " Sprite en deposito");
-                    i2++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadSprite == 0){
                         precioSprite.setVisible(false);
@@ -143,7 +138,6 @@ public class VentanaExp extends JFrame{
                     dineroUsuario = dineroUsuario - fantaPrice;
                     cantidadFanta--;
                     System.out.println("Quedan " + cantidadFanta + " Fanta en deposito");
-                    i3++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadFanta == 0){
                         precioFanta.setVisible(false);
@@ -160,7 +154,6 @@ public class VentanaExp extends JFrame{
                     dineroUsuario = dineroUsuario - snickersPrice;
                     cantidadSnickers--;
                     System.out.println("Quedan " + cantidadSnickers + " Snickers en deposito");
-                    i4++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadSnickers == 0){
                         precioSnickers.setVisible(false);
@@ -177,7 +170,6 @@ public class VentanaExp extends JFrame{
                     dineroUsuario = dineroUsuario - super8Price;
                     cantidadSuper8--;
                     System.out.println("Quedan " + cantidadSuper8 + " Super8 en deposito");
-                    i5++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadSuper8 == 0){
                         precioSuper8.setVisible(false);
@@ -199,6 +191,22 @@ public class VentanaExp extends JFrame{
                     }
                 }
                 dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
+            }
+        });
+        rellenarMaquina.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                cantidadCoca = cantidadDefault;
+                cantidadSprite = cantidadDefault;
+                cantidadFanta = cantidadDefault;
+                cantidadSnickers = cantidadDefault;
+                cantidadSuper8 = cantidadDefault;
+                precioCoca.setVisible(true);
+                precioSprite.setVisible(true);
+                precioFanta.setVisible(true);
+                precioSnickers.setVisible(true);
+                precioSuper8.setVisible(true);
             }
         });
     };
