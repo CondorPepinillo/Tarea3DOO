@@ -4,7 +4,15 @@ import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * Clase PanelPrincipal
+ * Esta clase se encarga de crear la ventana principal del proyecto,
+ * tambien se encarga de crear los paneles y dar acceso a las funciones del resto de las clases.
+ */
 public class PanelPrincipal extends JFrame{
+    /**
+     * Lo relacionado con la creacion de los elementos visuales de la ventana
+     */
     private JPanel PanelPrincipal;
     private JButton Snickers;
     private JButton Fanta;
@@ -27,18 +35,27 @@ public class PanelPrincipal extends JFrame{
     private JButton rellenarMaquina;
     private JPanel PanelComprador;
 
+    /**
+     * Los precios de los distintos productos de la maquina expendedora
+     */
     private int cocaColaPrice = 300;
     private int spritePrice = 300;
     private int fantaPrice = 300;
     private int snickersPrice = 500;
     private int super8Price = 500;
 
+    /**
+     * Variables auxiliares para asignar los numeros de serie de los productos
+     */
     private int i1 = 0;
     private int i2 = 0;
     private int i3 = 0;
     private int i4 = 0;
     private int i5 = 0;
 
+    /**
+     * Unidades inicicales de los productos
+     */
     private int cantidadDefault = 5;
 
     private int cantidadCoca = cantidadDefault;
@@ -47,11 +64,23 @@ public class PanelPrincipal extends JFrame{
     private int cantidadSnickers = cantidadDefault;
     private int cantidadSuper8 = cantidadDefault;
 
+    /**
+     * El dinero que ha sido ingresado a la maquina
+     */
     private int dineroUsuario = 0;
 
+    /**
+     * Crea el deposito para las monedas
+     */
     DepositoMonedas depositoMonedas = new DepositoMonedas();
 
+    /**
+     * Constructor de la clase PanelPrincipal
+     */
     public PanelPrincipal(){
+        /**
+         * Se crea la ventana y sus elementos principales
+         */
         JFrame frame = new JFrame("Panel Principal");
         frame.getContentPane().add(PanelPrincipal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -64,6 +93,9 @@ public class PanelPrincipal extends JFrame{
 
         frame.pack();
         frame.setVisible(true);
+        /**
+         * Al presionar el boton se mete una moneda de 100 a la maquina
+         */
         Moneda100.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -74,6 +106,9 @@ public class PanelPrincipal extends JFrame{
                 dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
             }
         });
+        /**
+         * Al presionar el boton se mete una moneda de 500 a la maquina
+         */
         Moneda500.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -84,6 +119,9 @@ public class PanelPrincipal extends JFrame{
                 dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
             }
         });
+        /**
+         * Al presionar el boton se mete una moneda de 1000 a la maquina
+         */
         Moneda1000.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -94,6 +132,9 @@ public class PanelPrincipal extends JFrame{
                 dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
             }
         });
+        /**
+         * Al presionar el boton se mete una moneda de 1500 a la maquina
+         */
         Moneda1500.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -104,6 +145,9 @@ public class PanelPrincipal extends JFrame{
                 dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
             }
         });
+        /**
+         * Al presionar el boton se compra una CocaCola
+         */
         CocaCola.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -121,6 +165,9 @@ public class PanelPrincipal extends JFrame{
                 }
             }
         });
+        /**
+         * Al presionar el boton se compra una Sprite
+         */
         Sprite.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -138,6 +185,9 @@ public class PanelPrincipal extends JFrame{
                 }
             }
         });
+        /**
+         * Al presionar el boton se compra una Fanta
+         */
         Fanta.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -155,6 +205,9 @@ public class PanelPrincipal extends JFrame{
                 }
             }
         });
+        /**
+         * Al presionar el boton se compra una Snickers
+         */
         Snickers.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -172,6 +225,9 @@ public class PanelPrincipal extends JFrame{
                 }
             }
         });
+        /**
+         * Al presionar el boton se compra un Super8
+         */
         Super8.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -189,6 +245,9 @@ public class PanelPrincipal extends JFrame{
                 }
             }
         });
+        /**
+         * Al presionar el boton se te devulve el vuelto de la maquina
+         */
         devolverVuelto.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -205,6 +264,9 @@ public class PanelPrincipal extends JFrame{
                 dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
             }
         });
+        /**
+         * Al presionar el boton se rellenan los productos de la maquina
+         */
         rellenarMaquina.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {

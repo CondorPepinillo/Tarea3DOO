@@ -4,15 +4,29 @@ import com.tarea1doo.*;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Clase VentanaConImagen
+ * Esta clase se encarga de crear las ventanas que representan cuando se dispensa un objeto
+ */
+
 public class VentanaConImagen extends JFrame {
 
+    /**
+     * Constructor de la clase Departamento
+     * @param producto Indica el producto que se dispensa de la maquina, este saldra como imagen es su propia ventana.
+     * @param i Variable auxiliar para el proceso de asignar numeros de serie.
+     */
     public VentanaConImagen(ProductList producto, int i) {
-        // Configurar la ventana
+        /**
+         * Creacion y configuracion de la ventana
+         */
         setTitle("Producto");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
-        // Crear un panel para colocar la imagen
+        /**
+         * Creacion del panel de la ventana, saldra una imagen del @param producto.
+         */
         JPanel panel = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
