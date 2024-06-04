@@ -5,8 +5,8 @@ public class Snickers extends Producto{
      * Constructor de la clase Snickers.
      * @param serie Serie del producto.
      */
-    public Snickers(int serie){
-        super(serie);
+    public Snickers(){
+        super(400);
     }
     /**
      * Método que simula el acto de comer el producto.
