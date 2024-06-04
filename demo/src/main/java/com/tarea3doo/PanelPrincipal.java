@@ -33,6 +33,12 @@ public class PanelPrincipal extends JFrame{
     private int snickersPrice = 500;
     private int super8Price = 500;
 
+    private int i1 = 0;
+    private int i2 = 0;
+    private int i3 = 0;
+    private int i4 = 0;
+    private int i5 = 0;
+
     private int cantidadDefault = 5;
 
     private int cantidadCoca = cantidadDefault;
@@ -103,9 +109,10 @@ public class PanelPrincipal extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= cocaColaPrice && cantidadCoca > 0){
-                    new VentanaConImagen(ProductList.COCA);
+                    new VentanaConImagen(ProductList.COCA, i1);
                     dineroUsuario = dineroUsuario - cocaColaPrice;
                     cantidadCoca--;
+                    i1++;
                     System.out.println("Quedan " + cantidadCoca + " CocaCola en deposito");
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadCoca == 0){
@@ -119,9 +126,10 @@ public class PanelPrincipal extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= spritePrice && cantidadSprite > 0){
-                    new VentanaConImagen(ProductList.SPRITE);
+                    new VentanaConImagen(ProductList.SPRITE, i2);
                     dineroUsuario = dineroUsuario - spritePrice;
                     cantidadSprite--;
+                    i2++;
                     System.out.println("Quedan " + cantidadSprite + " Sprite en deposito");
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadSprite == 0){
@@ -135,9 +143,10 @@ public class PanelPrincipal extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= fantaPrice && cantidadFanta > 0){
-                    new VentanaConImagen(ProductList.FANTA);
+                    new VentanaConImagen(ProductList.FANTA, i3);
                     dineroUsuario = dineroUsuario - fantaPrice;
                     cantidadFanta--;
+                    i3++;
                     System.out.println("Quedan " + cantidadFanta + " Fanta en deposito");
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadFanta == 0){
@@ -151,9 +160,10 @@ public class PanelPrincipal extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= snickersPrice && cantidadSnickers > 0){
-                    new VentanaConImagen(ProductList.SNICKERS);
+                    new VentanaConImagen(ProductList.SNICKERS, i4);
                     dineroUsuario = dineroUsuario - snickersPrice;
                     cantidadSnickers--;
+                    i4++;
                     System.out.println("Quedan " + cantidadSnickers + " Snickers en deposito");
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadSnickers == 0){
@@ -167,9 +177,10 @@ public class PanelPrincipal extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= super8Price && cantidadSuper8 > 0){
-                    new VentanaConImagen(ProductList.SUPER8);
+                    new VentanaConImagen(ProductList.SUPER8, i5);
                     dineroUsuario = dineroUsuario - super8Price;
                     cantidadSuper8--;
+                    i5++;
                     System.out.println("Quedan " + cantidadSuper8 + " Super8 en deposito");
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadSuper8 == 0){

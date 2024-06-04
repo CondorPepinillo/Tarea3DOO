@@ -1,7 +1,7 @@
 package com.tarea1doo;
 
 public class Snickers extends Producto{
-    public Snickers(){
-        super(400);
+    public Snickers(int i){
+        super(400 + i);
     }
 }

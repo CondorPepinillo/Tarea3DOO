@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class VentanaConImagen extends JFrame {
 
-    public VentanaConImagen(ProductList producto) {
+    public VentanaConImagen(ProductList producto, int i) {
         // Configurar la ventana
         setTitle("Producto");
         setSize(400, 300);
@@ -21,27 +21,27 @@ public class VentanaConImagen extends JFrame {
                 ImageIcon imagen = null;
                 if (producto == ProductList.COCA) {
                     imagen = new ImageIcon("../Tarea3DOO/demo/src/main/resources/cocacolabottle.png");
-                    Producto coca = new CocaCola();
+                    Producto coca = new CocaCola(i);
                     System.out.println("Dispensada Cococola con numero de serie "+ coca.getSerie());
                 }
                 else if (producto == ProductList.SPRITE) {
                     imagen = new ImageIcon("../Tarea3DOO/demo/src/main/resources/BebidaSprite500mlx (1).png");
-                    Producto sprite = new Sprite();
+                    Producto sprite = new Sprite(i);
                     System.out.println("Dispensada Sprite con numero de serie "+ sprite.getSerie());
                 }
                 else if (producto == ProductList.FANTA){
                     imagen = new ImageIcon("../Tarea3DOO/demo/src/main/resources/fanta-botella.png");
-                    Producto fanta = new Fanta();
+                    Producto fanta = new Fanta(i);
                     System.out.println("Dispensada Fanta con numero de serie "+ fanta.getSerie());
                 }
                 else if (producto == ProductList.SNICKERS){
                     imagen = new ImageIcon("../Tarea3DOO/demo/src/main/resources/Chocolate-Peanut-53-g.png");
-                    Producto snickers = new CocaCola();
+                    Producto snickers = new Snickers(i);
                     System.out.println("Dispensado Snicker con numero de serie "+ snickers.getSerie());
                 }
                 else if (producto == ProductList.SUPER8){
                     imagen = new ImageIcon("../Tarea3DOO/demo/src/main/resources/supero829g (1).png");
-                    Producto super8 = new CocaCola();
+                    Producto super8 = new Super8(i);
                     System.out.println("Dispensado Super 8 con numero de serie "+ super8.getSerie());
                 }
                 // Dibujar la imagen en el panel

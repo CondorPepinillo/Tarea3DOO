@@ -1,7 +1,7 @@
 package com.tarea1doo;
 
 public class CocaCola extends Producto{
-    public CocaCola(){
-        super(100);
+    public CocaCola(int i){
+        super(100 + i);
     }
 }
