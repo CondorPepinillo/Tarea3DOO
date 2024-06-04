@@ -4,8 +4,8 @@ import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class VentanaExp extends JFrame{
-    private JPanel panel1;
+public class PanelPrincipal extends JFrame{
+    private JPanel PanelPrincipal;
     private JButton Snickers;
     private JButton Fanta;
     private JButton Sprite;
@@ -16,7 +16,7 @@ public class VentanaExp extends JFrame{
     private JButton Moneda1500;
     private JButton Super8;
     private JPanel MonedasPanel;
-    private JPanel PreciosPanel;
+    private JPanel PanelExpendedor;
     private JLabel dineroIngresado;
     private JLabel precioCoca;
     private JLabel precioSprite;
@@ -25,6 +25,7 @@ public class VentanaExp extends JFrame{
     private JLabel precioSuper8;
     private JButton devolverVuelto;
     private JButton rellenarMaquina;
+    private JPanel PanelComprador;
 
     private int cocaColaPrice = 300;
     private int spritePrice = 300;
@@ -44,9 +45,9 @@ public class VentanaExp extends JFrame{
 
     DepositoMonedas depositoMonedas = new DepositoMonedas();
 
-    public VentanaExp(){
-        JFrame frame = new JFrame("Ventana Exp");
-        frame.getContentPane().add(panel1);
+    public PanelPrincipal(){
+        JFrame frame = new JFrame("Panel Principal");
+        frame.getContentPane().add(PanelPrincipal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
         precioCoca.setText("$"+cocaColaPrice);

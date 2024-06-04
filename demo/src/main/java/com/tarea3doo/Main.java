@@ -7,7 +7,7 @@ package com.tarea3doo;
  */
 public class Main {
     public static void main(String[] args) {
-        VentanaExp ventanaExp = new VentanaExp();
+        PanelPrincipal ventanaExp = new PanelPrincipal();
     }
 }
 
