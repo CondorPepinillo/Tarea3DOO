@@ -99,6 +99,7 @@ public class VentanaExp extends JFrame{
                     new VentanaConImagen(ProductList.COCA, i1);
                     dineroUsuario = dineroUsuario - cocaColaPrice;
                     cantidadCoca--;
+                    System.out.println("Quedan " + cantidadCoca + " CocaCola en deposito");
                     i1++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadCoca == 0){
@@ -115,6 +116,7 @@ public class VentanaExp extends JFrame{
                     new VentanaConImagen(ProductList.SPRITE,i2);
                     dineroUsuario = dineroUsuario - spritePrice;
                     cantidadSprite--;
+                    System.out.println("Quedan " + cantidadSprite + " Sprite en deposito");
                     i2++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadSprite == 0){
@@ -131,6 +133,7 @@ public class VentanaExp extends JFrame{
                     new VentanaConImagen(ProductList.FANTA, i3);
                     dineroUsuario = dineroUsuario - fantaPrice;
                     cantidadFanta--;
+                    System.out.println("Quedan " + cantidadFanta + " Fanta en deposito");
                     i3++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadFanta == 0){
@@ -147,6 +150,7 @@ public class VentanaExp extends JFrame{
                     new VentanaConImagen(ProductList.SNICKERS, i4);
                     dineroUsuario = dineroUsuario - snickersPrice;
                     cantidadSnickers--;
+                    System.out.println("Quedan " + cantidadSnickers + " Snickers en deposito");
                     i4++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadSnickers == 0){
@@ -163,6 +167,7 @@ public class VentanaExp extends JFrame{
                     new VentanaConImagen(ProductList.SUPER8, i5);
                     dineroUsuario = dineroUsuario - super8Price;
                     cantidadSuper8--;
+                    System.out.println("Quedan " + cantidadSuper8 + " Super8 en deposito");
                     i5++;
                     dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
                     if(cantidadSuper8 == 0){
