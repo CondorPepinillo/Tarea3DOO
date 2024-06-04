@@ -1,5 +1,5 @@
 package com.tarea3doo;
-import com.tarea1doo.ProductList;
+import com.tarea1doo.*;
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -45,6 +45,7 @@ public class VentanaExp extends JFrame{
 
     private int dineroUsuario = 0;
 
+    DepositoMonedas depositoMonedas = new DepositoMonedas();
 
     public VentanaExp(){
         JFrame frame = new JFrame("Ventana Exp");
@@ -64,6 +65,8 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 dineroUsuario += 100;
+                Moneda moneda = new Moneda(100);
+                depositoMonedas.agregarMoneda(moneda);
                 dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
             }
         });
@@ -72,6 +75,8 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 dineroUsuario += 500;
+                Moneda moneda = new Moneda(500);
+                depositoMonedas.agregarMoneda(moneda);
                 dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
             }
         });
@@ -80,6 +85,8 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 dineroUsuario += 1000;
+                Moneda moneda = new Moneda(1000);
+                depositoMonedas.agregarMoneda(moneda);
                 dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
             }
         });
@@ -88,6 +95,8 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 dineroUsuario += 1500;
+                Moneda moneda = new Moneda(1500);
+                depositoMonedas.agregarMoneda(moneda);
                 dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
             }
         });
@@ -96,7 +105,7 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= cocaColaPrice && cantidadCoca > 0){
-                    new VentanaConImagen(ProductList.COCA, i1);
+                    new VentanaConImagen(ProductList.COCA);
                     dineroUsuario = dineroUsuario - cocaColaPrice;
                     cantidadCoca--;
                     System.out.println("Quedan " + cantidadCoca + " CocaCola en deposito");
@@ -113,7 +122,7 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= spritePrice && cantidadSprite > 0){
-                    new VentanaConImagen(ProductList.SPRITE,i2);
+                    new VentanaConImagen(ProductList.SPRITE);
                     dineroUsuario = dineroUsuario - spritePrice;
                     cantidadSprite--;
                     System.out.println("Quedan " + cantidadSprite + " Sprite en deposito");
@@ -130,7 +139,7 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= fantaPrice && cantidadFanta > 0){
-                    new VentanaConImagen(ProductList.FANTA, i3);
+                    new VentanaConImagen(ProductList.FANTA);
                     dineroUsuario = dineroUsuario - fantaPrice;
                     cantidadFanta--;
                     System.out.println("Quedan " + cantidadFanta + " Fanta en deposito");
@@ -147,7 +156,7 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= snickersPrice && cantidadSnickers > 0){
-                    new VentanaConImagen(ProductList.SNICKERS, i4);
+                    new VentanaConImagen(ProductList.SNICKERS);
                     dineroUsuario = dineroUsuario - snickersPrice;
                     cantidadSnickers--;
                     System.out.println("Quedan " + cantidadSnickers + " Snickers en deposito");
@@ -164,7 +173,7 @@ public class VentanaExp extends JFrame{
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 if(dineroUsuario >= super8Price && cantidadSuper8 > 0){
-                    new VentanaConImagen(ProductList.SUPER8, i5);
+                    new VentanaConImagen(ProductList.SUPER8);
                     dineroUsuario = dineroUsuario - super8Price;
                     cantidadSuper8--;
                     System.out.println("Quedan " + cantidadSuper8 + " Super8 en deposito");
@@ -180,7 +189,15 @@ public class VentanaExp extends JFrame{
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                dineroUsuario = 0;
+                int[] valoresMoneda = {1500, 1000, 500, 100};
+                for (int valorMoneda : valoresMoneda) {
+                    while (dineroUsuario >= valorMoneda) {
+                        dineroUsuario -= valorMoneda;
+                        Moneda moneda = new Moneda(valorMoneda);
+                        System.out.println("Devuelta moneda con valor " + valorMoneda + " y numero de serie " + moneda.getSerie());
+                        new VentanaConMoneda(valorMoneda);
+                    }
+                }
                 dineroIngresado.setText("Dinero ingresado: " + dineroUsuario);
             }
         });

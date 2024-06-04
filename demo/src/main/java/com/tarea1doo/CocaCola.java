@@ -5,8 +5,8 @@ public class CocaCola extends Producto{
      * Constructor de la clase Cola-Cola.
      * @param serie Serie del producto.
      */
-    public CocaCola(int serie){
-        super(serie);
+    public CocaCola(){
+        super(100);
     }
     /**
      * Método que simula el acto de beber el producto.

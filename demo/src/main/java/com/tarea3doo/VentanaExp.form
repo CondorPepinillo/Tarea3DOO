@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.tarea3doo.VentanaExp">
   <grid id="27dc6" binding="panel1" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="5" y="5" width="1527" height="1179"/>
+      <xy x="5" y="5" width="1632" height="1179"/>
     </constraints>
     <properties/>
     <border type="none">
@@ -89,6 +89,7 @@
             </constraints>
             <properties>
               <foreground color="-1761508"/>
+              <icon value="coin1000.png"/>
               <text value="1000$"/>
             </properties>
           </component>
@@ -98,6 +99,7 @@
             </constraints>
             <properties>
               <foreground color="-1732088"/>
+              <icon value="coin500.png"/>
               <text value="500$"/>
             </properties>
           </component>
@@ -107,6 +109,7 @@
             </constraints>
             <properties>
               <foreground color="-13900544"/>
+              <icon value="coin100.png"/>
               <text value="100$"/>
             </properties>
           </component>
@@ -116,6 +119,7 @@
             </constraints>
             <properties>
               <foreground color="-7138843"/>
+              <icon value="coin1500.png"/>
               <text value="1500$"/>
             </properties>
           </component>
