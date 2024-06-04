@@ -1,19 +1,16 @@
 package com.tarea1doo;
 
 public class Super8 extends Producto{
-    /**
-     * Constructor de la clase Super8.
-     * @param serie Serie del producto.
-     */
-    public Super8(int serie){
-        super(serie);
+    public Super8(int serialNumber){
+        super(serialNumber);
     }
-    /**
-     * Método que simula el acto de comer el producto.
-     *
-     * @return Nombre del producto.
-     */
-    public String beber(){
-        return new String("super8");
+
+    @Override
+    public String getNombre() {
+        return "Super 8";
+    }
+    @Override
+    public String beber() {
+        return "Glug glug, ¡qué rico Super 8!";
     }
 }

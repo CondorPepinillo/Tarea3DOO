@@ -15,8 +15,12 @@ public class Expendedor{
     private Deposito snickers;
     /* El depósito de Super8.*/
     private Deposito super8;
-    /* El depósito de monedas.*/
+    /* El depósito de monedas vuelto.*/
     private DepositoM monVu;
+    /* El deposito del producto comprado.*/
+    private Deposito depositoUnico;
+    /* El deposito de las monedas recibidas*/
+    private DepositoM monedas;
     private int precio;
 
     /**
@@ -58,6 +62,9 @@ public class Expendedor{
             snickers.addProducto(new Snickers(400 + i));
             super8.addProducto(new Super8(500 + i));
         }
+
+        depositoUnico = new Deposito();
+        monedas = new DepositoM();
     }
 
     /**
@@ -70,7 +77,7 @@ public class Expendedor{
      * @throws NoHayProductoException Si el producto no está disponible.
      * @throws PagoInsuficienteException Si la moneda no tiene suficiente valor para comprar el producto.
      */
-    public Producto comprarProducto(Moneda m, int cual) throws PagoIncorrectoException, NoHayProductoException, PagoInsuficienteException{
+    public void comprarProducto(Moneda m, int cual) throws PagoIncorrectoException, NoHayProductoException, PagoInsuficienteException{
         if(m == null){
             throw new PagoIncorrectoException();
         }
@@ -79,6 +86,8 @@ public class Expendedor{
             monVu.addMoneda(m);
             throw new PagoInsuficienteException();
         } 
+
+        monedas.addMoneda(m);
 
         switch (cual) {
             case 1:
@@ -89,8 +98,9 @@ public class Expendedor{
                     for(int i = 0;i < (m.getValor() - precio)/100;i++){
                         monVu.addMoneda(new Moneda100());
                     }
-                    return coca.getProducto();
+                    depositoUnico.addProducto(coca.getProducto());
                 }
+                break;
             case 2:
                 if(sprite.checkSize()){
                     monVu.addMoneda(m);
@@ -99,8 +109,9 @@ public class Expendedor{
                     for(int i = 0;i < (m.getValor() - precio)/100;i++){
                         monVu.addMoneda(new Moneda100());
                     }
-                    return sprite.getProducto();
+                    depositoUnico.addProducto(sprite.getProducto());
                 }
+                break;
             case 3:
                 if(fanta.checkSize()){
                     monVu.addMoneda(m);
@@ -109,8 +120,9 @@ public class Expendedor{
                     for(int i = 0;i < (m.getValor() - precio)/100;i++){
                         monVu.addMoneda(new Moneda100());
                     }
-                    return fanta.getProducto();
+                    depositoUnico.addProducto(fanta.getProducto());
                 }
+                break;
             case 4:
                 if(snickers.checkSize()){
                     monVu.addMoneda(m);
@@ -119,8 +131,9 @@ public class Expendedor{
                     for(int i = 0;i < (m.getValor() - precio)/100;i++){
                         monVu.addMoneda(new Moneda100());
                     }
-                    return snickers.getProducto();
+                    depositoUnico.addProducto(snickers.getProducto());
                 }
+                break;
             case 5:
                 if(super8.checkSize()){
                     monVu.addMoneda(m);
@@ -129,10 +142,11 @@ public class Expendedor{
                     for(int i = 0;i < (m.getValor() - precio)/100;i++){
                         monVu.addMoneda(new Moneda100());
                     }
-                    return super8.getProducto();
+                    depositoUnico.addProducto(super8.getProducto());
                 }
+                break;
             default:
-                return null;
+                break;
         }
     }
     
@@ -143,5 +157,14 @@ public class Expendedor{
      */
     public Moneda getVuelto(){
         return monVu.getMoneda();
+    }
+
+    /**
+     * Devuelve el producto comprado.
+     *
+     * @return El producto comprado.
+     */
+    public Producto getProducto(){
+        return depositoUnico.getProducto();
     }
 }

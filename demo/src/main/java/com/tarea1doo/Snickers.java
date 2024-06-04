@@ -1,19 +1,16 @@
 package com.tarea1doo;
 
 public class Snickers extends Producto{
-    /**
-     * Constructor de la clase Snickers.
-     * @param serie Serie del producto.
-     */
-    public Snickers(int serie){
-        super(serie);
+    public Snickers(int serialNumber){
+        super(serialNumber);
     }
-    /**
-     * Método que simula el acto de comer el producto.
-     *
-     * @return Nombre del producto.
-     */
-    public String beber(){
-        return new String("snickers");
+
+    @Override
+    public String getNombre() {
+        return "Snickers";
+    }
+    @Override
+    public String beber() {
+        return "Glug glug, ¡qué rico Snicker!";
     }
 }

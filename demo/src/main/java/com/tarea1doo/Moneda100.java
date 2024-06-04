@@ -5,6 +5,7 @@ public class Moneda100 extends Moneda{
         super();
     }
 
+    @Override
     public int getValor(){
         return 100;
     }
