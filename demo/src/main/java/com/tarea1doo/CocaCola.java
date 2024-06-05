@@ -1,16 +1,11 @@
 package com.tarea1doo;
 
 public class CocaCola extends Producto{
-    public CocaCola(int serialNumber){
-        super(serialNumber);
-    }
-
-    @Override
-    public String getNombre() {
-        return "CocaCola";
-    }
-    @Override
-    public String beber() {
-        return "Glug glug, ¡qué refrescante CocaCola!";
+    /**
+     * Constructor de la clase CocaCola.
+     * @param i Es un valor que que se le agrega a 100 para crear la serie del producto.
+     */
+    public CocaCola(int i){
+        super(100 + i);
     }
 }

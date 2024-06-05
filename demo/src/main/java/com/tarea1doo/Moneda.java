@@ -1,26 +1,19 @@
 package com.tarea1doo;
 
-import javax.swing.*;
-import java.awt.*;
+public class Moneda {
+    private static int nextSerie = 1;
+    private int serie;
+    private int valor;
 
-public abstract class Moneda extends JComponent {
-    private static int nextSerialNumber = 1;
-    private int serialNumber;
-    public Moneda(){
-        this.serialNumber = nextSerialNumber++;
+    public Moneda(int valor){
+        this.serie =nextSerie++;
     }
 
-    public int getSerialNumber() {
-        return this.serialNumber;
+    public int getSerie(){
+        return serie;
     }
-    public abstract int getValor();
 
-    @Override
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        // Dibuja la moneda como un círculo
-        g.drawOval(0, 0, getWidth(), getHeight());
-        // Dibuja el número de serie de la moneda
-        g.drawString(String.valueOf(serialNumber), getWidth() / 2, getHeight() / 2);
+    public void usar(){
+        System.out.println("Usada moneda con valor " + valor + " y numero de serie " + serie);
     }
 }

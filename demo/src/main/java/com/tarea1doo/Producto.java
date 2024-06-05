@@ -1,32 +1,19 @@
 package com.tarea1doo;
 
-import javax.swing.JComponent;
-import java.awt.Graphics;
-
-public abstract class Producto extends JComponent {
-    private static int nextSerialNumber = 1;
-    private int serialNumber;
-    private String nombre;
-
+public abstract class Producto {
+    private int serie;
+    /**
+     * Constructor de la clase Producto.
+     * @param serie Es el numero de serie de el producto en cuestion.
+     */
     public Producto(int serie){
-        this.serialNumber = nextSerialNumber++;
+        this.serie = serie;
     }
-
-    public String getNombre() {
-        return nombre;
+    /**
+     * @return Numero de serie del producto.
+     */
+    public int getSerie(){
+        return serie;
     }
-    public int getSerialNumber(){
-        return serialNumber;
     }
-    @Override
-    public void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        // Dibuja el producto como un rectángulo
-        g.drawRect(0, 0, getWidth(), getHeight());
-        // Dibuja el número de serie del producto
-        g.drawString(String.valueOf(serialNumber), getWidth() / 2, getHeight() / 2);
-    }
-
-    public abstract String beber();
-}
 
